@@ -1,4 +1,4 @@
-# DI.js
+# AOP.js
 
 0.17 kb Aspect Oriented Programming Micro Library
 
