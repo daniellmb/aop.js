@@ -1,5 +1,5 @@
 /**
- * @file 0.27 kb Dependency Injection Micro Library
+ * 0.17 kb Aspect Oriented Programming Micro Library
  * @author Daniel Lamb <dlamb.open.source@gmail.com>
  */
 var AOP = function(obj) {
