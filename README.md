@@ -2,6 +2,8 @@
 
 0.17 kb Aspect Oriented Programming Micro Library
 
+Adding functionality through aspect oriented programming (AOP) allows you to modify a classes behavior after it has been instantiated. New methods don't override the existing ones, but supplement them. Imagine the usefulness of having callbacks such as before, after and around every method in your class. This allows you to hook into classes dynamically without having to hack the original class definition. If you're not using the observer or mediator design patterns you could use aspect oriented programming to add in hooks to log user interactions with objects without having to modify the original code.
+
 ## Example
 
 Run [live example](http://jsfiddle.net/daniellmb/H2rvF/)
