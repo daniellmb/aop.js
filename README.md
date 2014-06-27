@@ -25,17 +25,17 @@ AOP(Message.prototype);
 Message.prototype.around("show", function(message) {
   console.log("Message '" + message + "' showing");
   // call the wrapped method
-  return this.proceed(message);
+  this.proceed(message);
 });
 
 // before
 Message.prototype.before("show", function(message) {
-  return console.log("Message '" + message + "' will show");
+  console.log("Message '" + message + "' will show");
 });
 
 // after
 Message.prototype.after("show", function(message) {
-  return console.log("Message '" + message + "' shown and was " + this.result['show']);
+  console.log("Message '" + message + "' shown and was " + this.result['show']);
 });
 
 // create an instance
