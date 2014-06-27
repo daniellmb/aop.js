@@ -8,6 +8,44 @@ Adding functionality through aspect oriented programming (AOP) allows you to mod
 
 Run [live example](http://jsfiddle.net/daniellmb/H2rvF/)
 
+## JavaScript
+```JavaScript
+// original object
+Message = function() {};
+Message.prototype = {
+  show: function(text) {
+    alert(text);
+    return "closed";
+  }
+};
+
+// extend object with AOP functionality
+AOP(Message.prototype);
+
+// around
+Message.prototype.around("show", function(message) {
+  console.log("Message '" + message + "' showing");
+  return this.proceed(message);
+});
+
+// before
+Message.prototype.before("show", function(message) {
+  return console.log("Message '" + message + "' will show");
+});
+
+// after
+Message.prototype.after("show", function(message) {
+  return console.log("Message '" + message + "' shown and was " + this.result['show']);
+});
+
+// create an instance
+messenger = new Message();
+
+// call the show method
+messenger.show("Hello World!");
+```
+
+### CoffeeScript
 ```CoffeeScript
 # original object
 Message = ->
