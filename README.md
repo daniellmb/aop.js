@@ -8,7 +8,7 @@ Adding functionality through aspect oriented programming (AOP) allows you to mod
 
 Run [live example](http://jsfiddle.net/daniellmb/H2rvF/)
 
-## JavaScript
+### JavaScript
 ```JavaScript
 // original object
 Message = function() {};
