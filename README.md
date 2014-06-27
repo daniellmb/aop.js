@@ -25,6 +25,7 @@ AOP(Message.prototype);
 // around
 Message.prototype.around("show", function(message) {
   console.log("Message '" + message + "' showing");
+  // call the wrapped method
   return this.proceed(message);
 });
 
@@ -59,7 +60,7 @@ AOP Message::
 # around
 Message::around "show", (message) ->
   console.log "Message '#{message}' showing"
-  #call the wrapped method
+  # call the wrapped method
   @proceed message
 
 # before
